@@ -1,0 +1,175 @@
+const numButtons = document.querySelectorAll(".num-btn");
+const opButtons = document.querySelectorAll(".op-btn");
+
+const clearBtn = document.querySelector("#clr-btn");
+const value1 = document.querySelector("#val-1");
+const value2 = document.querySelector("#val-2");
+const opInput = document.querySelector("#op-input");
+const negativeBtn = document.querySelector("#negative-btn");
+const equalBtn = document.querySelector("#equal-btn");
+const answer = document.querySelector("#answer");
+
+let activeElementId;
+
+
+
+
+// Handle operand inputs
+for(let i = 0; i < numButtons.length; i++)
+{
+	numButtons[i].addEventListener
+	(
+		"click",
+		() =>
+		{
+			if(activeElementId === "val-1")
+			{
+				let val;
+				
+				if(!value1.value)
+					val = 0;
+				else
+					val = parseInt(value1.value);
+				
+				val *= 10;
+				val += parseInt(numButtons[i].innerText);
+				
+				value1.value = val;
+			}
+
+			if(activeElementId === "val-2")
+			{
+				let val;
+				
+				if(!value2.value)
+					val = 0;
+				else
+					val = parseInt(value2.value);
+				
+				val *= 10;
+				val += parseInt(numButtons[i].innerText);
+				
+				value2.value = val;
+			}
+		}
+	);
+}
+
+
+
+
+// Handle operator input
+for(let i = 0; i < opButtons.length; i++)
+{
+	opButtons[i].addEventListener
+	(
+		"click",
+		() =>
+		{
+			if(activeElementId === "op-input")
+				opInput.value = opButtons[i].innerText;
+		}
+	);
+}
+
+
+
+
+// Handle 'equal to' button click and calculate answer
+equalBtn.addEventListener
+(
+	"click",
+	() =>
+	{
+		switch(opInput.value)
+		{
+			case "+":
+				answer.value = add(value1.value, value2.value);
+				break;
+
+			case "-":
+				answer.value = subtract(value1.value, value2.value);
+				break;
+
+			case "*":
+				answer.value = multiply(value1.value, value2.value);
+				break;
+
+			case "/":
+				answer.value = divide(value1.value, value2.value);
+				break;
+
+			case "%":
+				answer.value = modulus(value1.value, value2.value);
+				break;
+		}
+	}
+);
+
+
+
+
+// Handle 'clear' button click
+clearBtn.addEventListener
+(
+	"click",
+	() =>
+	{
+		answer.value = "";
+		opInput.value = "";
+		value1.value = "";
+		value2.value = "";
+	}
+);
+
+
+
+
+/* ======================================= UTILITY FUNCTIONS =========================================== */
+
+
+// Get id of focused input
+value1.addEventListener
+(
+	"click",
+	() => { activeElementId = document.activeElement.id; }
+);
+
+value2.addEventListener
+(
+	"click",
+	() => { activeElementId = document.activeElement.id; }
+);
+
+opInput.addEventListener
+(
+	"click",
+	() => { activeElementId = document.activeElement.id; }
+);
+
+
+// Calculate answer
+function add(num1, num2)
+{
+	return num1 + num2;
+}
+
+function subtract(num1, num2)
+{
+	return num1 - num2;
+}
+
+function multiply(num1, num2)
+{
+	return num1 * num2;
+}
+
+function divide(num1, num2)
+{
+	return num1 / num2;
+}
+
+function modulus(num1, num2)
+{
+	return num1 % num2;
+}

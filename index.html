@@ -42,20 +42,20 @@
 				</div>
 
 				<div class="row">
-					<input class="num-input no-border-left no-border-top" type="number" placeholder="Val 1" required>
+					<input id="val-1" class="num-input no-border-left no-border-top" type="number" placeholder="Val 1" readonly required>
 					
-					<input id="op-input" class="no-border-top" type="text" placeholder="Op" required>
+					<input id="op-input" class="no-border-top" type="text" placeholder="Op" readonly required>
 
-					<input class="num-input no-border-top" type="number" placeholder="Val 2" required>
+					<input id="val-2" class="num-input no-border-top" type="number" placeholder="Val 2" readonly required>
 
 					<button id="equal-btn" class="no-border-top">=</button>
 
-					<input id="answer" class="no-border-right" type="number" placeholder="Ans" disabled>
+					<input id="answer" class="no-border-right" type="text" placeholder="Ans" disabled>
 				</div>
 
 				<div class="row">
 					<button class="op-btn no-border-left">+</button>
-					<button class="op-btn">-</button>
+					<button id="negative-btn" class="op-btn">-</button>
 					<button class="op-btn">*</button>
 					<button class="op-btn">/</button>
 					<button class="op-btn no-border-right">%</button>
