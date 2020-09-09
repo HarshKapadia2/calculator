@@ -59,7 +59,7 @@ button
 	cursor: pointer;
 }
 
-button:hover, #clr-btn
+button:hover, #clr-btn:hover
 {
 	background-color: #bdbdbd;
 }
