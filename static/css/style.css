@@ -92,6 +92,11 @@ input:disabled
 	background-color: #ff8a65;
 }
 
+#equal-btn:hover
+{
+	background-color: #ff5722;
+}
+
 .op-btn
 {
 	background-color: #eeeeee;
