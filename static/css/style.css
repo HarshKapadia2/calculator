@@ -96,6 +96,11 @@ input:disabled
 	background-color: #eeeeee;
 }
 
+input:focus
+{
+	background-color: #eeeeee;
+}
+
 #equal-btn
 {
 	flex: 0.2;
