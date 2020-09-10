@@ -81,26 +81,29 @@ equalBtn.addEventListener
 	"click",
 	() =>
 	{
+		const val1 = parseInt(value1.value);
+		const val2 = parseInt(value2.value);
+
 		switch(opInput.value)
 		{
 			case "+":
-				answer.value = add(value1.value, value2.value);
+				answer.value = add(val1, val2);
 				break;
 
 			case "-":
-				answer.value = subtract(value1.value, value2.value);
+				answer.value = subtract(val1, val2);
 				break;
 
 			case "*":
-				answer.value = multiply(value1.value, value2.value);
+				answer.value = multiply(val1, val2);
 				break;
 
 			case "/":
-				answer.value = divide(value1.value, value2.value);
+				answer.value = divide(val1, val2);
 				break;
 
 			case "%":
-				answer.value = modulus(value1.value, value2.value);
+				answer.value = modulus(val1, val2);
 				break;
 		}
 	}
