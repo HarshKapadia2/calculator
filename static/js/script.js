@@ -23,34 +23,10 @@ for(let i = 0; i < numButtons.length; i++)
 		() =>
 		{
 			if(activeElementId === "val-1")
-			{
-				let val;
-				
-				if(!value1.value)
-					val = 0;
-				else
-					val = parseInt(value1.value);
-				
-				val *= 10;
-				val += parseInt(numButtons[i].innerText);
-				
-				value1.value = val;
-			}
+				value1.value = createOperand(value1.value, numButtons[i].innerText);
 
-			if(activeElementId === "val-2")
-			{
-				let val;
-				
-				if(!value2.value)
-					val = 0;
-				else
-					val = parseInt(value2.value);
-				
-				val *= 10;
-				val += parseInt(numButtons[i].innerText);
-				
-				value2.value = val;
-			}
+			else if(activeElementId === "val-2")
+				value2.value = createOperand(value2.value, numButtons[i].innerText);
 		}
 	);
 }
@@ -149,6 +125,23 @@ opInput.addEventListener
 	"click",
 	() => { activeElementId = document.activeElement.id; }
 );
+
+
+// Create operand
+function createOperand(curVal, digit)
+{
+	digit = parseInt(digit);
+
+	if(!curVal)
+		curVal = 0;
+	else
+		curVal = parseInt(curVal);
+
+	curVal *= 10;
+	curVal += digit;
+
+	return curVal;
+}
 
 
 // Calculate answer
