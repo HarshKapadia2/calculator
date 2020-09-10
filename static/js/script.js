@@ -98,6 +98,7 @@ clearBtn.addEventListener
 		opInput.value = "";
 		value1.value = "";
 		value2.value = "";
+		activeElementId = "";
 	}
 );
 
