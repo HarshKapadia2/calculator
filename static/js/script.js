@@ -6,6 +6,7 @@ const value1 = document.querySelector("#val-1");
 const value2 = document.querySelector("#val-2");
 const opInput = document.querySelector("#op-input");
 const negativeBtn = document.querySelector("#negative-btn");
+const positiveBtn = document.querySelector("#positive-btn");
 const equalBtn = document.querySelector("#equal-btn");
 const answer = document.querySelector("#answer");
 
@@ -30,6 +31,40 @@ for(let i = 0; i < numButtons.length; i++)
 		}
 	);
 }
+
+
+
+
+// Handle negative sign input
+negativeBtn.addEventListener
+(
+	"click",
+	() =>
+	{
+		if(activeElementId === "val-1")
+			value1.value = "-" + value1.value;
+		
+		else if(activeElementId === "val-2")
+			value2.value = "-" + value2.value;
+	}
+);
+
+
+
+
+// Handle positive sign input
+positiveBtn.addEventListener
+(
+	"click",
+	() =>
+	{
+		if(activeElementId === "val-1" && value1.value[0] === "-")
+			value1.value = value1.value.substring(1);
+		
+		else if(activeElementId === "val-2" && value2.value[0] === "-")
+			value2.value = value2.value.substring(1);
+	}
+);
 
 
 
@@ -131,16 +166,7 @@ opInput.addEventListener
 // Create operand
 function createOperand(curVal, digit)
 {
-	digit = parseInt(digit);
-
-	if(!curVal)
-		curVal = 0;
-	else
-		curVal = parseInt(curVal);
-
-	curVal *= 10;
 	curVal += digit;
-
 	return curVal;
 }
 
