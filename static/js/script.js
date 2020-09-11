@@ -9,6 +9,7 @@ const negativeBtn = document.querySelector("#negative-btn");
 const positiveBtn = document.querySelector("#positive-btn");
 const equalBtn = document.querySelector("#equal-btn");
 const answer = document.querySelector("#answer");
+const error = document.querySelector("#error");
 
 let activeElementId;
 
@@ -86,12 +87,25 @@ for(let i = 0; i < opButtons.length; i++)
 
 
 
-// Handle 'equal to' button click and calculate answer
+// Handle 'equal to' button click
 equalBtn.addEventListener
 (
 	"click",
 	() =>
 	{
+		// Validate input
+		if(value1.value === "" || value2.value === "" || opInput.value === "")
+		{
+			error.innerText = "Empty inputs are not allowed.";
+			return;
+		}
+		if(value1.value === "-" || value2.value === "-")
+		{
+			error.innerText = "'-' is not an operand.";
+			return;
+		}
+		
+		// Calculate answer
 		const val1 = parseInt(value1.value);
 		const val2 = parseInt(value2.value);
 
@@ -134,6 +148,7 @@ clearBtn.addEventListener
 		value1.value = "";
 		value2.value = "";
 		activeElementId = "";
+		error.innerText = "";
 	}
 );
 
