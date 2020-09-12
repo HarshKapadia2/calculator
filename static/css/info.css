@@ -59,3 +59,21 @@ footer
 		font-size: 18px;
 	}
 }
+
+/* ======================================== DARK MODE ===================================== */
+
+.body-color, .footer-color
+{
+	background-color: #1a237e;
+	color: #fafafa;
+}
+
+.footer-color
+{
+	box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.25), 0 6px 20px 0 rgba(255, 255, 255, 0.3);
+}
+
+.a-color
+{
+	color: #fafafa;
+}
