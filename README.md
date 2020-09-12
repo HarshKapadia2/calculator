@@ -6,3 +6,13 @@
   <br />
   <i>Hosted at https://harshkapadia2.github.io/calculator/</i>
 </p>
+
+## Features
+
+- Operations
+   - Add
+   - Subtract
+   - Multiply
+   - Divide
+   - Modulus
+- Dark mode
