@@ -24,7 +24,12 @@ main
 	align-items: center;
 }
 
-#error
+.hide
+{
+	display: none;
+}
+
+.error
 {
 	color: red;
 	font-size: 20px;
@@ -43,15 +48,6 @@ main
 .row
 {
 	display: flex;
-}
-
-#name
-{
-	flex: 0.6;
-	display: flex;
-	justify-content: center;
-	font-size: 50px;
-	background-color: black;
 }
 
 #info
@@ -73,6 +69,30 @@ main
 	filter: drop-shadow(1px 1px 3px #bdbdbd);
 }
 
+#mode
+{
+	flex: 0.2;
+	background-color: black;
+	border: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#mode img
+{
+	width: 45%;
+}
+
+#name
+{
+	flex: 0.4;
+	display: flex;
+	justify-content: center;
+	font-size: 50px;
+	background-color: black;
+}
+
 a
 {
 	color: #fafafa;
@@ -88,12 +108,12 @@ button
 	cursor: pointer;
 }
 
-button:hover, #clr-btn:hover
+button:hover, .clr-btn:hover
 {
 	background-color: #bdbdbd;
 }
 
-#clr-btn
+.clr-btn
 {
 	flex: 0.2;
 	background-color: #fafafa;
@@ -110,23 +130,18 @@ input
 	border-radius: 0;
 }
 
-input:disabled
+input:disabled, input:focus
 {
 	background-color: #eeeeee;
 }
 
-input:focus
-{
-	background-color: #eeeeee;
-}
-
-#equal-btn
+.equal-btn
 {
 	flex: 0.2;
 	background-color: #ff8a65;
 }
 
-#equal-btn:hover
+.equal-btn:hover
 {
 	background-color: #ff5722;
 }
@@ -253,4 +268,48 @@ input:focus
 	{
 		padding: 2em 1em;
 	}
+}
+
+/* ======================================== DARK MODE ===================================== */
+
+.body-color
+{
+	background-color: #1a237e;
+}
+
+.error-color
+{
+	color: yellow;
+}
+
+.button-color, .input-color
+{
+	border-color: #757575;
+}
+
+.button-color:hover
+{
+	background-color: #757575;
+}
+
+.input-color, .num-btn-color, .clr-btn-color
+{
+	background-color: #212121;
+	color: #fafafa;
+}
+
+.input-color:disabled, .input-color:focus, .op-btn-color
+{
+	background-color: #424242;
+	color: #fafafa;
+}
+
+.equal-btn-color
+{
+	background-color: #ff5722;
+}
+
+.equal-btn-color:hover
+{
+	background-color: #ff8a65;
 }

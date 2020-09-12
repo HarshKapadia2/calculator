@@ -10,7 +10,8 @@
 		<link rel="stylesheet" href="./static/css/index.css">
 		<link rel="stylesheet" href="./static/css/github-corner.css">
 
-		<script defer src="./static/js/script.js"></script>
+		<script defer src="./static/js/mode.js"></script>
+		<script defer src="./static/js/calculator.js"></script>
 
 		<link rel="shortcut icon" href="./static/img/calculator.svg" type="image/x-icon">
 
@@ -35,15 +36,20 @@
 		</a>
 
 		<main>
-			<div id="error"></div>
+			<div class="error"></div>
 
 			<div id="calculator-wrapper">
 				<div class="row">
 					<a id="info" href="./info.html"><img src="./static/img/info.svg" alt="Info"></a>
 
+					<button id="mode">
+						<img id="moon" src="./static/img/moon.svg" alt="Dark">
+						<img id="sun" class="hide" src="./static/img/sun.svg" alt="Light">
+					</button>
+
 					<div id="name"><a href="https://www.linkedin.com/in/harshgkapadia/" target="_blank" rel="noreferrer">Harsh</a></div>
 
-					<button id="clr-btn" class="no-border-right no-border-top">C</button>
+					<button class="clr-btn no-border-right no-border-top">C</button>
 				</div>
 
 				<div class="row">
@@ -53,7 +59,7 @@
 
 					<input id="val-2" class="num-input no-border-top" type="text" placeholder="Val 2" readonly required>
 
-					<button id="equal-btn" class="no-border-top">=</button>
+					<button class="equal-btn no-border-top">=</button>
 
 					<input id="answer" class="no-border-right" type="text" placeholder="Ans" disabled>
 				</div>

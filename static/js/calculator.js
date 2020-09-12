@@ -1,15 +1,15 @@
 const numButtons = document.querySelectorAll(".num-btn");
 const opButtons = document.querySelectorAll(".op-btn");
 
-const clearBtn = document.querySelector("#clr-btn");
+const clearBtn = document.querySelector(".clr-btn");
 const value1 = document.querySelector("#val-1");
 const value2 = document.querySelector("#val-2");
 const opInput = document.querySelector("#op-input");
 const negativeBtn = document.querySelector("#negative-btn");
 const positiveBtn = document.querySelector("#positive-btn");
-const equalBtn = document.querySelector("#equal-btn");
+const equalBtn = document.querySelector(".equal-btn");
 const answer = document.querySelector("#answer");
-const error = document.querySelector("#error");
+const error = document.querySelector(".error");
 
 let activeElementId;
 
