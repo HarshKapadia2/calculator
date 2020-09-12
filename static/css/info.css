@@ -34,7 +34,17 @@ li
 
 a:hover
 {
-	color: #ff5722;
+	color: #ff8a65;
+}
+
+#back-link
+{
+	margin-bottom: 5em;
+}
+
+#back-link, footer
+{
+	font-size: 20px;
 }
 
 footer
@@ -54,7 +64,7 @@ footer
 
 @media screen and (max-width: 400px)
 {
-	li
+	li, #back-link, footer
 	{
 		font-size: 18px;
 	}
