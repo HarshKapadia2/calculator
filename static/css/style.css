@@ -47,11 +47,30 @@ main
 
 #name
 {
-	flex: 0.8;
+	flex: 0.6;
 	display: flex;
 	justify-content: center;
 	font-size: 50px;
 	background-color: black;
+}
+
+#info
+{
+	flex: 0.2;
+	background-color: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#info img
+{
+	width: 40%;
+}
+
+#info img:hover
+{
+	filter: drop-shadow(1px 1px 3px #bdbdbd);
 }
 
 a
